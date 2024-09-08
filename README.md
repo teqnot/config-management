@@ -10,3 +10,6 @@
 - [Задание 5](https://github.com/teqnot/config-management/blob/main/pract1/reg.sh)
 - [Задание 6](https://github.com/teqnot/config-management/blob/main/pract1/task6.sh)
 - [Задание 7](https://github.com/teqnot/config-management/blob/main/pract1/task7.sh)
+- [Задание 8](https://github.com/teqnot/config-management/blob/main/pract1/task8.sh)
+- [Задание 9](https://github.com/teqnot/config-management/blob/main/pract1/task9.sh)
+- [Задание 10](https://github.com/teqnot/config-management/blob/main/pract1/task10.sh)
