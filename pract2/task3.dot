@@ -1,0 +1,81 @@
+digraph G {
+    node [shape=box];
+
+    subgraph cluster_matplotlib {
+        label="matplotlib";
+        matplotlib;
+        python;
+        freetype;
+        libpng;
+        numpy;
+        setuptools;
+        cycler;
+        dateutil;
+        kiwisolver;
+        pyparsing;
+        
+        matplotlib -> python;
+        matplotlib -> freetype;
+        matplotlib -> libpng;
+        matplotlib -> numpy;
+        matplotlib -> setuptools;
+        matplotlib -> cycler;
+        matplotlib -> dateutil;
+        matplotlib -> kiwisolver;
+        matplotlib -> pyparsing;
+    }
+
+    subgraph cluster_express {
+        label="express";
+        express;
+        accepts;
+        body_parser;
+        array_flatten;
+        content_disposition;
+        content_type;
+        cookie_signature;
+        cookie;
+        debug;
+        depd;
+        encodeurl;
+        escape_html;
+        etag;
+        finalhandler;
+        fresh;
+        http_errors;
+        merge_descriptors;
+        methods;
+        on_finished;
+        parseurl;
+        path_to_regexp;
+        proxy_addr;
+        qs;
+        range_parser;
+        safe_buffer;
+        
+        express -> accepts;
+        express -> body_parser;
+        express -> array_flatten;
+        express -> content_disposition;
+        express -> content_type;
+        express -> cookie_signature;
+        express -> cookie;
+        express -> debug;
+        express -> depd;
+        express -> encodeurl;
+        express -> escape_html;
+        express -> etag;
+        express -> finalhandler;
+        express -> fresh;
+        express -> http_errors;
+        express -> merge_descriptors;
+        express -> methods;
+        express -> on_finished;
+        express -> parseurl;
+        express -> path_to_regexp;
+        express -> proxy_addr;
+        express -> qs;
+        express -> range_parser;
+        express -> safe_buffer;
+    }
+}
