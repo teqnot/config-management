@@ -1,0 +1,32 @@
+digraph G {
+	node [shape=box];
+
+	subgraph ".NETStandard1.0" {
+		label=".NETStandard1.0";
+		".NETStandard1.0" -> "Microsoft.CSharp";
+		"Microsoft.CSharp" -> "4.3.0";
+		".NETStandard1.0" -> "NETStandard.Library";
+		"NETStandard.Library" -> "1.6.1";
+		".NETStandard1.0" -> "System.ComponentModel.TypeConverter";
+		"System.ComponentModel.TypeConverter" -> "4.3.0";
+		".NETStandard1.0" -> "System.Runtime.Serialization.Primitives";
+		"System.Runtime.Serialization.Primitives" -> "4.3.0";
+	}
+
+	subgraph ".NETStandard1.3" {
+		label=".NETStandard1.3";
+		".NETStandard1.3" -> "Microsoft.CSharp";
+		"Microsoft.CSharp" -> "4.3.0";
+		".NETStandard1.3" -> "NETStandard.Library";
+		"NETStandard.Library" -> "1.6.1";
+		".NETStandard1.3" -> "System.ComponentModel.TypeConverter";
+		"System.ComponentModel.TypeConverter" -> "4.3.0";
+		".NETStandard1.3" -> "System.Runtime.Serialization.Formatters";
+		"System.Runtime.Serialization.Formatters" -> "4.3.0";
+		".NETStandard1.3" -> "System.Runtime.Serialization.Primitives";
+		"System.Runtime.Serialization.Primitives" -> "4.3.0";
+		".NETStandard1.3" -> "System.Xml.XmlDocument";
+		"System.Xml.XmlDocument" -> "4.3.0";
+	}
+
+}
