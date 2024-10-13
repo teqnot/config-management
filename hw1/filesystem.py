@@ -3,7 +3,7 @@ import os
 import sys
 import time
 from datetime import datetime
-from io import StringIO
+#from io import StringIO
 
 class VirtualFileSystem:
     def __init__(self, zip_path):
