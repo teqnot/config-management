@@ -125,7 +125,8 @@ C = {E} | {}
 '''
 ```
 
-![image](https://github.com/user-attachments/assets/fbfc4d68-2f10-4213-a81c-a8a51653779f)
+![image](https://github.com/user-attachments/assets/c3b3e24c-b1bd-4df5-a6f9-c2b0cbf18cd6)
+
 
 
 ## Задание 5
