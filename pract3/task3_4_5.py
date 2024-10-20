@@ -22,17 +22,17 @@ def generate_phrase(grammar, start):
     return str(start)
 
 # Задание 3
-BNF = '''
-E = B | B E
-B = 0 | 1
-'''
+# BNF = '''
+# E = B | B E
+# B = 0 | 1
+# '''
 
 # Задание 4
-# BNF = '''
-# E = P | C
-# P = (E) | ()
-# C = {E} | {}
-# '''
+BNF = '''
+E = P | C
+P = ( E ) | ()
+C = { E } | {}
+'''
 
 # Задание 5
 # BNF = '''

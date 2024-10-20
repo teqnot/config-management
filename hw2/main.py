@@ -15,7 +15,7 @@ def parse_nuspec(nuspec_file):
             dep_id = dependency.attrib['id']
             dep_version = dependency.attrib.get('version', 'unknown')
             dependencies.append((dep_id, dep_version, target_framework))
-
+    
     foo = parse_dependencies(dependencies)
     return foo
 
@@ -31,7 +31,6 @@ def parse_dependencies(deps):
 def extract_dependencies(package_path, depth, current_depth=0):
     if current_depth >= depth:
         return []
-
     dependencies = {}
     with zipfile.ZipFile(package_path, 'r') as zip_ref:
         for file in zip_ref.namelist():
@@ -45,6 +44,8 @@ def visualize_graph(dependencies, output_file):
         f.write("digraph G {\n\tnode [shape=box];\n\n")
         print("digraph G {\n\tnode [shape=box];\n\n")
         for i in dependencies.keys():
+            f.write(f'\t"{package_name}" -> "{i}";\n')
+            print(f'\t"{package_name}" -> "{i}";\n')
             f.write(f'\tsubgraph "{i}"' + " {\n")
             print(f'\tsubgraph "{i}"' + " {\n")
             f.write(f'\t\tlabel="{i}";\n')
@@ -60,6 +61,7 @@ def visualize_graph(dependencies, output_file):
         print("}\n")
 
 def main():
+    global package_name
     parser = argparse.ArgumentParser(description="Dependency Graph Visualizer")
     parser.add_argument("--graphviz-path", required=True, help="Path to Graphviz program")
     parser.add_argument("--package-name", required=True, help="Name of the package to analyze")
@@ -67,15 +69,16 @@ def main():
     parser.add_argument("--max-depth", type=int, default=3, help="Maximum depth of dependency analysis")
 
     args = parser.parse_args()
+    package_name = args.package_name
     package_path = f"{args.package_name}.nupkg"
 
     if not os.path.exists(package_path):
-        print(f"Package {package_path} not found.")
+        print(f"[ Package {package_path} not found ]")
         return
 
     dependencies = extract_dependencies(package_path, args.max_depth)
     visualize_graph(dependencies, args.output_file)
-    print(f"Graph code written to {args.output_file}")
+    print(f"[ Graph code written to {args.output_file} ]")
 
 if __name__ == "__main__":
     main()
