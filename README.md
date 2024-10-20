@@ -2,6 +2,7 @@
 
 ## Домашние работы
 - [1-я Домашняя Работа](https://github.com/teqnot/config-management/tree/main/hw1)
+- [2-я Домашняя Работа](https://github.com/teqnot/config-management/tree/main/hw2)
 
 ## Практические работы
 
