@@ -113,6 +113,8 @@ B = 0 | 1
 '''
 ```
 
+![image](https://github.com/user-attachments/assets/8cbeb709-ca71-45b6-a680-905c4f29f426)
+
 ## Задание 4
 
 ```python
@@ -122,6 +124,10 @@ P = (E) | ()
 C = {E} | {}
 '''
 ```
+
+![image](https://github.com/user-attachments/assets/c3b3e24c-b1bd-4df5-a6f9-c2b0cbf18cd6)
+
+
 
 ## Задание 5
 
@@ -133,3 +139,5 @@ F = "~" F | "(" E ")" | VAR
 VAR = x | y | z
 '''
 ```
+
+![image](https://github.com/user-attachments/assets/22beef8d-d878-4cae-82f4-3c9231463425)
