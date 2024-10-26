@@ -1,0 +1,3 @@
+var MaxTemperature 85
+var WarningLevels array(75, 80, 85)
+var CriticalLevel 85
