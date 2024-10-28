@@ -1,3 +1,3 @@
-module hw3
+module hw
 
-go 1.23.2
+go 1.18

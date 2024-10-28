@@ -43,7 +43,7 @@ func evaluateConstants(value string, variables map[string]string) (string, error
 			return val
 		}
 
-		return fmt.Sprintf(" [undefined_var_%s ]", varName)
+		return fmt.Sprintf("[undefined_var_%s ]", varName)
 	}), nil
 }
 
@@ -56,6 +56,10 @@ func convertToConfigLang(config *Config) (string, error) {
 
 		if err != nil {
 			return "", err
+		}
+
+		if strings.HasPrefix(evaluatedValue, "(") && strings.HasSuffix(evaluatedValue, ")") {
+			evaluatedValue = "array " + evaluatedValue
 		}
 
 		variables[v.Name] = evaluatedValue
