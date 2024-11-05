@@ -1,4 +1,4 @@
 <config>
     <var name="MaxTemperature">85</var>
-    <var name="WarningLevels">array(75, 80, 85)</var>
+    <var name="WarningLevels">(75, 80, 85)</var>
 </config>
